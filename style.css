@@ -204,7 +204,8 @@ h1, .main-title {
   margin: 20px auto 0; 
   padding-top: 10px;
   padding-bottom: 60px;
-  height: 60vh; 
+  height: auto;
+  max-height: 80vh;
   overflow-y: auto;
   overflow-x: hidden;
   border: 2px solid #9333ea;
@@ -385,6 +386,12 @@ h1, .main-title {
     margin-right: auto;
     width: 100%;
     max-width: 320px;
+  }
+
+  .task-area-box {
+    height: auto;
+    max-height: none;
+    overflow-y: visible;
   }
 }
 
