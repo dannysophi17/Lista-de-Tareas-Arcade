@@ -19,11 +19,8 @@ body.crt {
 }
 
 body.crt::after {
-  content: "";
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
+  position: absolute;
+  inset: 0;
   pointer-events: none;
   background: repeating-linear-gradient(
     0deg,
@@ -32,17 +29,17 @@ body.crt::after {
     transparent 2px,
     transparent 4px
   );
-  z-index: 0;
+  z-index: -1;
   animation: scanline 1s infinite linear;
 }
 
 html, body {
-  height: auto;
-  min-height: 100%;
-  overflow-x: hidden;
-  overflow-y: auto;
+  height: 100%;
+  overflow: auto !important;
+  -webkit-overflow-scrolling: touch;
   position: relative;
 }
+
 
 /* === Título principal === */
 h1, .main-title {
@@ -207,7 +204,8 @@ h1, .main-title {
   padding-top: 10px;
   padding-bottom: 60px;
   height: 60vh;
-  overflow-y: auto;
+  overflow-y: scroll !important;
+  -webkit-overflow-scrolling: touch;
   overflow-x: hidden;
   border: 2px solid #9333ea;
   border-radius: 20px;
