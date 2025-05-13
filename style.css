@@ -15,7 +15,7 @@ body {
 
 body.crt {
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 body.crt::after {
@@ -32,9 +32,17 @@ body.crt::after {
     transparent 2px,
     transparent 4px
   );
-  z-index: 999;
+  z-index: 0;
   animation: scanline 1s infinite linear;
 }
+
+html, body {
+  height: auto;
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
 
 /* === Título principal === */
 h1, .main-title {
@@ -199,7 +207,7 @@ h1, .main-title {
   padding-top: 10px;
   padding-bottom: 60px;
   height: auto;
-  max-height: 80vh;
+  height: 60vh;
   overflow-y: auto;
   overflow-x: hidden;
   border: 2px solid #9333ea;
@@ -359,7 +367,7 @@ h1, .main-title {
 /* === Responsivo === */
 @media (max-width: 768px) {
    body.crt::after {
-    position: absolute;
+    display:none
   }
   .task-form {
     flex-direction: column;
@@ -386,9 +394,9 @@ h1, .main-title {
   }
 
   .task-area-box {
-    height: auto;
-    max-height: none;
-    overflow-y: visible;
+    height: 60vh;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
 }
 
@@ -776,24 +784,3 @@ h1, .main-title {
       0 0 30px #06b6d4;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
