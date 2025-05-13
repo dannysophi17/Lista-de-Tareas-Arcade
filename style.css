@@ -366,8 +366,12 @@ h1, .main-title {
 
 /* === Responsivo === */
 @media (max-width: 768px) {
-   body.crt::after {
-    display:none
+    body.crt::after {
+    content: none !important;
+    display: none !important;
+    position: static !important;
+    width: 0 !important;
+    height: 0 !important;
   }
   .task-form {
     flex-direction: column;
