@@ -11,13 +11,6 @@
 
 ---
 
-## 📦 Estado del Proyecto | Project Status
-
-✅ Proyecto finalizado — versión estable con scroll funcional en móviles, estilo arcade neón y almacenamiento local.  
-✅ Final version — responsive design with working mobile scroll and neon arcade style.
-
----
-
 ## 📘 Español
 
 ### Descripción
