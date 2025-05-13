@@ -35,10 +35,10 @@ body.crt::after {
 
 html, body {
   height: 100%;
-  overflow: auto !important;
-  -webkit-overflow-scrolling: touch;
-  position: relative;
+  overflow: hidden; 
+  overscroll-behavior: none; 
 }
+
 
 
 /* === Título principal === */
@@ -204,7 +204,7 @@ h1, .main-title {
   padding-top: 10px;
   padding-bottom: 60px;
   height: 60vh;
-  overflow-y: scroll !important;
+  overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   overflow-x: hidden;
   border: 2px solid #9333ea;
@@ -364,8 +364,10 @@ h1, .main-title {
 /* === Responsivo === */
 @media (max-width: 768px) {
   body.crt::after {
-    display: none !important;
-  }
+    position: absolute;
+    z-index: -1;
+}
+
 
   html, body {
     overflow-y: auto !important;
