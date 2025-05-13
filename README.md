@@ -4,6 +4,13 @@
 
 ---
 
+## 🌐 Vista en línea / Live Preview
+
+➡️ [Haz clic aquí para ver el proyecto en acción](https://dannysophi17.github.io/Lista-de-Tareas-Arcade/)  
+➡️ [Click here to see the project live](https://dannysophi17.github.io/Lista-de-Tareas-Arcade/)
+
+---
+
 ## 📘 Español
 
 ### Descripción
