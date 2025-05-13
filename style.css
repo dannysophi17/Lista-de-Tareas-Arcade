@@ -21,7 +21,7 @@ body::before {
 
 body.crt {
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 body.crt::after {
@@ -40,6 +40,11 @@ body.crt::after {
   );
   z-index: 999;
   animation: scanline 1s infinite linear;
+}
+
+body, html {
+  height: 100%;
+  overflow: auto;
 }
 
 /* === Título principal === */
@@ -204,8 +209,7 @@ h1, .main-title {
   margin: 20px auto 0; 
   padding-top: 10px;
   padding-bottom: 60px;
-  height: auto;
-  max-height: 80vh;
+  height: 60vh;
   overflow-y: auto;
   overflow-x: hidden;
   border: 2px solid #9333ea;
@@ -389,9 +393,9 @@ h1, .main-title {
   }
 
   .task-area-box {
-    height: auto;
-    max-height: none;
-    overflow-y: visible;
+    height: 60vh;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
 }
 
@@ -779,6 +783,28 @@ h1, .main-title {
       0 0 30px #06b6d4;
   }
 }
+
+/* === Scroll personalizado global === */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(10, 0, 30, 0.3);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #9333ea, #a855f7, #c084fc);
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px #f0abfc;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #a855f7, #c084fc);
+}
+
 
 
 
